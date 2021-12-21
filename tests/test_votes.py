@@ -36,4 +36,3 @@ def test_vote_post_not_found(authorized_client, test_posts, test_vote):
 def test_unauthorized_user(client, test_posts):
     res = client.post("/vote/", json={"post_id":test_posts[3].id, "dir":0})
     assert res.status_code  == 401
-
