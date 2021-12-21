@@ -11,7 +11,7 @@ from app import schemas, models
 from app.config import settings
 from app.oauth2 import create_access_token
 
-SQLALCHEMY_DATABASE_URL = f'mysql+pymysql://{settings.DATABASE_USERNAME}@{settings.DATABASE_HOST}:{settings.DATABASE_PORT}/{settings.DATABASE_NAME}_test'
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.DATABASE_USERNAME}:{settings.DATABASE_PASSWORD}@{settings.DATABASE_HOST}:{settings.DATABASE_PORT}/{settings.DATABASE_NAME}_test'
 
 #SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root@localhost:3306/fastapi_test"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
